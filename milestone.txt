@@ -1,0 +1,55 @@
+MILESTONE 1
+    milestone 1.0.0
+Dopo aver inizializzato il progetto con lo scafholdingcompleto.
+Creiamo il layout di base. Creaiamo 3 componenti vue: Header, Main, Footer.
+Inseriamo i componenti nell'App.vue
+Creiamo un store.js nell'apposita cartella in cui inseriamo l'url base e i vari endpoint che potrebbero servirci.
+Creiamo anche un oggetto contenente a sua volta l'oggetto params il quale avrà varie proprietà, quelle che richiede l'API
+
+    milestone 1.0.1
+Iniziamo a dare i vari stili all'header
+Creiamo l'h1 con il titolo che vogliamo
+Creiamo il componente per la searchbar nel quale inseriremo una searchbar e un bottone che farà partire un metodo dello store in store.js
+Attualmente possiamo anche lasciare il campo del metodo vuoto e lo inseriremo quando lo creeremo.
+Una volta che la search e l'header da punto di vista grafico ci appagano, possiamo ritenere concluso questo passaggio.
+
+    milestone 1.0.2
+Iniziamo a dare i vari stili al main
+Qui è fondamentale iniziare a prendere una decisione se vogliamo creare una webapp o una pagina normale.
+Creiamo e importiamo due conponenti: "MoviesList.vue" e "SeriesList.vue".
+Una volta che il main ci appaga dal punti di vista estetico, possiamo ritenere concluso questo passaggio.
+
+    milestone 1.1.0
+Creaiamo un componente per una singola card, che rappresenterà in futuro un film o una serie tv.
+Iniziamo a importarla solo nel componente MovieList.vue, così da poter vedere le modifiche che facciamo.
+Facciamola statica, con una immagine e titolo fissi, ci serviranno per poterla customizzare e adottare gli stili che riteniamo più opportuni.
+In questo passaggio inizieremo a capire i dati che ci serviranno e di conseguenza a quali dobbiamo conservare dalla chiamata API.
+Quindi iniziamo a creare un oggetto temporaneo nello store.js, tipo "cardTpl", nel quale inseriremo i parametri che ci servono.
+Utiliziamo le stesse key che abbiamo visto ritornare dalla API ma questa volta i dati saranno statici, ci serve solo come esempio.
+Una volta creato l'oggetto (attualmente inutilizzato) e riteniamo appagante lo stato grafico possiamo ritenere conclusa la milestone.
+
+    milestone 1.1.1
+Creiamo delle props nel SingleCard.vue dove richiediamo al genitore i dati necessari per poterle creare dinamicamente.
+Quindi rendiamo dinamici i parametri come :src, {{title}}, {{desc}}, ecc..
+Successivamente andiamo dal genitore (MoviesList.vue), importiamo store.js e nei data dichiariamoli anche con un semplice ="store,"
+Dopodiche nella sezione template, inseriamo i vari parametri dinamicamente al componente card, es:  <SingleCard :src="store.imgTpl.img"/>
+
+    milestone 1.1.2
+Creiamo un array nello store.js che un giorno conterrà la nostra lista di oggetti dove cianscuno corrisponderà a un film/serie tv.
+Inizializziamolo inserendo qualche elemento random nell'array, tipo [2, 3 , 4]. Ci servirà per poter testare il v-for sulla card che andremmo a fare.
+Inoltre quando faremo la chiamata API lo andremo a sovrascrivere quandi non ci sono problemi.
+
+    milestone 1.1.3
+Aggiungiamo un v-for nel MovieList.vue al componente del template: SingleCard, es.. <SingleCard :src="store.imgTpl.img" v=for"(element, i) in store.contentArray"/>
+il v-for dovrà fare riferimento agli ementi contenuti nell'array creato prima (vedi milestone 1.1.2)
+Ora dovremmo iniziare a capire come verrà fuori il layout, quindi customizziamo tutto ciò che riteniamo opportuno, come grandezza,spazio tra le cards, tutto ciò che è estetica.
+Possiamo anche inserire più elementi nell'array per simulare e valutare la situazione di una lunga ricerca.
+Inseriamo un h2 e customizziamolo per far sapere all'utente che questa è la lista di soli film.
+Una volta che l'estetica generale ci appaga, possiamo ritenere conclusa questa milestone.
+
+MILESTONE 2
+    milestone 2.0.0
+Importiamo Axios nello store.js
+Creiamo un oggetto "options" contenete un altro ogetto chiamato "params",il quale dovrà os
+Creiamo un metodo nello store che farà una chiamata API la quale ritornerà un array di oggetti contenenti i dati dei nostri film.
+Il metodo dovrà usare come "url finale" la url base + l'endpoint dei movies, seguito da un virgola e da

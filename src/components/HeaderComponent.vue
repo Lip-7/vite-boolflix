@@ -2,7 +2,7 @@
     <header>
         <div class="wrapper px-5 d-flex justify-content-between align-items-center py-3">
             <div class="leftSide d-flex align-items-center">
-                <div class="logo"><img class=" img-fluid" src="../assets/img/logo.png" alt=""></div>
+                <div class="logo"><a href="../../index.html"><img class=" img-fluid" src="../assets/img/logo.png" alt=""></a></div>
                 <ul class=" d-flex gap-3 align-items-center mb-0">
                     <li>
                         <a href="#" class="navlink active">Home</a>

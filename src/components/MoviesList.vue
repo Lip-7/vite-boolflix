@@ -1,7 +1,7 @@
 <template>
     <div class="row p-5 g-3">
         <h1 class="h2 text-white mb-3">Movies</h1>
-        <SingleContent v-for="(movie, i) in store.movieList" :key="i" :title="movie.title" :img="store.img.baseUrl + movie.backdrop_path"/>
+        <SingleContent v-for="(movie, i) in store.movieList" :key="i" :title="movie.title" :img="movie.backdrop_path"/>
     </div>
 </template>
   

@@ -1,9 +1,10 @@
 <template>
   <HeaderComponent/>
-
+  <MainComponent/>
 </template>
 
 <script>
+import {store} from './store/store.js'
 import HeaderComponent from './components/HeaderComponent.vue';
 import MainComponent from './components/MainComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
@@ -15,7 +16,7 @@ export default {
     }
   },
   methods: {
-
+    
   },
   components: {
     HeaderComponent,
@@ -23,7 +24,7 @@ export default {
     FooterComponent
   },
   mounted() {
-
+    store.getMovies()
   }
 }
 </script>

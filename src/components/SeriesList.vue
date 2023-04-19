@@ -1,13 +1,10 @@
 <template>
-    <main>
-        <MoviesList/>
-    </main>
+    
 </template>
   
 <script>
-import MoviesList from './MoviesList.vue';
 export default {
-    name: 'MainComponent',
+    name: 'SeriesList',
     data() {
         return {
 
@@ -17,7 +14,7 @@ export default {
 
     },
     components: {
-        MoviesList,
+
     },
     mounted() {
 

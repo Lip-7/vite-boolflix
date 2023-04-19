@@ -28,5 +28,7 @@ header .navlink{
 }
 header .navlink.active{
     color: rgba($color: #ffffff, $alpha: 1);
-
+}
+h1,h2 {
+    text-shadow: 0px 0px 10px black;
 }

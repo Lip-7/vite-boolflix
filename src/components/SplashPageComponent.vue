@@ -1,6 +1,8 @@
 <template>
     <div class="wrap">
-        <video autoplay src="../assets/vids/intro.mp4"></video>
+        <video autoplay controls>
+            <source src="../assets/vids/intro.mp4">
+        </video>
     </div>
 </template>
   

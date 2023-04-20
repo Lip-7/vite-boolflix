@@ -13,11 +13,9 @@
                     <img :src="'/flags/' + flag + '.svg'" alt="">
                 </div>
                 <div class="rating">
-                    <h6>Rating: {{ vote }} {{ stars }}</h6>
-
-                    <div class="stars">
-
-                    </div>
+                    <h6>Rating: {{ vote }}  </h6>
+                    <StarsRating :vote="stars"/>
+                    
                 </div>
                 <!-- <img v-if="availableFlahs.includes(originLanguage)" :src="'/flags/' + originLanguage + '.svg'" alt=""> -->
             </div>
@@ -26,6 +24,7 @@
 </template>
   
 <script>
+import StarsRating from './StarsRating.vue'
 import {store} from '../store/store.js'
 export default {
     name: 'SingleContent',
@@ -43,6 +42,7 @@ export default {
 
     },
     components: {
+        StarsRating,
 
     },
     mounted() {
@@ -57,6 +57,9 @@ export default {
             }
         },
         stars() {
+            return this.vote / 2;
+        }
+        /* stars() {
             return Math.round(this.vote) / 2;
         },
         starscount() {
@@ -65,9 +68,9 @@ export default {
                 maxStars.length = stars;
                 return maxStars;
             } else {
-                const starNew = Math.round
+                const starNew = Math.round(stars)
             }
-        }
+        } */
     },
 }
 </script>
@@ -82,7 +85,7 @@ export default {
     .card-body{
     }
     .cardInfo {
-        opacity: 0;
+        opacity: .7;
         top: 0;
         bottom: 0;
         left: 0;

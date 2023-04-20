@@ -30,7 +30,7 @@ export default {
     store.getMovies()
     setTimeout(() => {
       store.flags.splashFlag = false;
-    }, 4000);
+    }, 5000);
   }
 }
 </script>

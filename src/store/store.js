@@ -48,6 +48,9 @@ export const store = reactive({
             "vote_count": 20954
             },
     ],
+    flags: {
+        splashFlag: true,
+    },
     img: {
         baseUrl: 'https://image.tmdb.org/t/p/w300/',
     },

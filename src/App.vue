@@ -1,10 +1,12 @@
 <template>
-  <HeaderComponent/>
-  <MainComponent/>
+  <SplashPageComponent v-if="store.flags.splashFlag"/>
+  <HeaderComponent v-if="!store.flags.splashFlag"/>
+  <MainComponent v-if="!store.flags.splashFlag"/>
 </template>
 
 <script>
-import {store} from './store/store.js'
+import { store } from './store/store.js'
+import SplashPageComponent from './components/SplashPageComponent.vue';
 import HeaderComponent from './components/HeaderComponent.vue';
 import MainComponent from './components/MainComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
@@ -12,7 +14,7 @@ export default {
   name: 'App',
   data() {
     return {
-
+      store,
     }
   },
   methods: {
@@ -21,10 +23,14 @@ export default {
   components: {
     HeaderComponent,
     MainComponent,
-    FooterComponent
+    FooterComponent,
+    SplashPageComponent,
   },
   mounted() {
     store.getMovies()
+    setTimeout(() => {
+      store.flags.splashFlag = false;
+    }, 4000);
   }
 }
 </script>

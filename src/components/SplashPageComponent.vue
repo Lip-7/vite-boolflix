@@ -32,6 +32,8 @@ export default {
     height: 100vh;
     overflow: hidden;
     video{
+        position: relative;
+        top: -50px;
         width: 100%;
     }
 }

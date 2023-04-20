@@ -2,7 +2,7 @@
     <header>
         <div class="wrapper px-5 d-flex justify-content-between align-items-center py-3">
             <div class="leftSide d-flex align-items-center">
-                <div class="logo"><a href="../../index.html"><img class=" img-fluid" src="../assets/img/logo.png" alt=""></a></div>
+                <div class="logo"><a href="../../index.html" @click.prevent="store.getMovies"><img class=" img-fluid" src="../assets/img/logo.png" alt=""></a></div>
                 <ul class=" d-flex gap-3 align-items-center mb-0">
                     <li>
                         <a href="#" class="navlink active">Home</a>
@@ -35,12 +35,13 @@
 </template>
   
 <script>
+import {store} from '../store/store'
 import SearchBarz from './SearchBarz.vue';
 export default {
     name: 'HeaderComponent',
     data() {
         return {
-
+            store,
         }
     },
     methods: {

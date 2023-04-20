@@ -49,7 +49,7 @@ export const store = reactive({
             },
     ],
     img: {
-        baseUrl: 'https://image.tmdb.org/t/p/w500/',
+        baseUrl: 'https://image.tmdb.org/t/p/w300/',
     },
     options: {
         params: {

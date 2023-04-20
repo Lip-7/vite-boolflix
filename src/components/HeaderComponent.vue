@@ -56,20 +56,28 @@ export default {
 </script>
   
 <style lang="scss" scoped>
-.wrapper{
-    .logo{
-        width: 100px;
-    }
-    .rightSide{
-        a{
-            position: relative;
-            top: 2px;
+@use '../assets/styles/partials/variables' as *;
+header{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: $bgColor;
+    .wrapper{
+        .logo{
+            width: 100px;
         }
-        i{
-            cursor: pointer;
-        }
-        .userImg{
-            width: 30px;
+        .rightSide{
+            a{
+                position: relative;
+                top: 2px;
+            }
+            i{
+                cursor: pointer;
+            }
+            .userImg{
+                width: 30px;
+            }
         }
     }
 }

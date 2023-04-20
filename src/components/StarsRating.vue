@@ -42,7 +42,7 @@ export default {
     &::before {
         content: '★★★★★';
         letter-spacing: 3px;
-        background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+        background: linear-gradient(90deg, #fc0 var(--percent), #fff var(--percent));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }

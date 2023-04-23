@@ -1,7 +1,7 @@
 <template>
     <div v-if="store.seriesList.length > 0" class="row p-5 g-3 mx-0">
         <h1 class="h2 text-white mb-3">Series</h1>
-        <SingleContent v-for="(serie, i) in store.seriesList" :key="i" :title="serie.name" :img="serie.backdrop_path" :originaltitle="serie.original_name" :originLanguage="serie.original_language" :vote="serie.vote_average"/>
+        <SingleContent v-for="(serie, i) in store.seriesList" :key="i" :title="serie.name" :img="serie.backdrop_path" :originaltitle="serie.original_name" :originLanguage="serie.original_language" :vote="serie.vote_average" :description="serie.overview"/>
     </div>
 </template>
   

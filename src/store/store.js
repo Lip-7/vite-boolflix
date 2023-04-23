@@ -99,6 +99,9 @@ export const store = reactive({
         return options
     },
     searchMovies() {
+        if (!this.options.params.query) {
+            return
+        }
         const baseUrl = this.url.baseUrl + this.url.searchEndpoint + this.url.movieEndpoint;
         const options = this.getOptions();
         axios.get(baseUrl, options).then(res => {

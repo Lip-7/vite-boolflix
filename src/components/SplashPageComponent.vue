@@ -1,6 +1,6 @@
 <template>
     <div class="wrap">
-        <video autoplay controls>
+        <video autoplay muted>
             <source src="../assets/vids/intro.mp4">
         </video>
     </div>

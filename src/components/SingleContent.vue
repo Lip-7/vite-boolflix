@@ -28,6 +28,13 @@
                 </div>
             </div>
         </div>
+        <div class="card opacity-0">
+            <img v-if="img" :src="store.img.baseUrl + img" class="card-img-top" :alt="title">
+            <img v-else src="../assets/img/imgplaceholder.png" class="card-img-top" alt="">
+            <div class="card-body">
+                <h5 class="card-title mb-0">{{ title }}</h5>
+            </div>
+        </div>
     </div>
 </template>
   
@@ -88,7 +95,7 @@ export default {
 
 .flip-card {
     perspective: 1000px;
-    height: 250px;
+    /* height: 250px; */
     overflow-y: hidden;
 
     .flip-card-inner {
@@ -102,7 +109,8 @@ export default {
         transform: rotateY(180deg);
     }
 
-    .flip-card-front, .flip-card-back {
+    .flip-card-front,
+    .flip-card-back {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -110,7 +118,8 @@ export default {
         /* Safari */
         backface-visibility: hidden;
     }
-    .flip-card-back{
+
+    .flip-card-back {
         transform: rotateY(180deg);
     }
 }
@@ -141,17 +150,21 @@ export default {
 
     .description {
         overflow-y: auto;
-        height: 60%;
+        height: 50%;
+        &::-webkit-scrollbar{
+            display: none;
+        }
     }
 
     .playButton {
         opacity: .7;
         font-size: 2rem;
-         position: absolute;
+        position: absolute;
         top: 0px;
         right: 10px;
         cursor: pointer;
         transition: all 1s;
+
         &:hover {
             scale: 1.5;
             opacity: 1;

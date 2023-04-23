@@ -1,5 +1,5 @@
 <template>
-    <div class="col-12 col-sm-6 col-md-3 col-lg-2 flip-card">
+    <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-2 flip-card">
         <div class="flip-card-inner position-relative">
             <div class="card flip-card-front">
                 <img v-if="img" :src="store.img.baseUrl + img" class="card-img-top" :alt="title">

@@ -110,7 +110,7 @@ export default {
     }
     .description{
         overflow-y: auto;
-        height: 50%;
+        height: 60%;
     }
     .playButton{
         opacity: .7;
